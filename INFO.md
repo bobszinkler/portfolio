@@ -2,7 +2,7 @@
 
 ## Commit Style
 
-```
+```MD
  feat_    - hozzáadott funckió
  style_   - stílus módosítás
  fix_     - javított hiba
@@ -20,32 +20,32 @@
  _config  -   beállításokhoz
  _docs    -   dokumentációhoz
 
- `feat_atoms-import-to-template`
+ `feat_atoms-import-to-template_add`
 ```
 
- ## Semantic Versioning
- 
-**v1.0.0 = MAJOR.MINOR.PATCH**
+## Semantic Versioning
 
-**MAJOR (1.0.0)**
+> v1.0.0 = MAJOR.MINOR.PATCH
 
-### Törő változás. Olyan módosítás, ami megtöri a régi kódot:
+### MAJOR (1.0.0)
+
+#### Törő változás. Olyan módosítás, ami megtöri a régi kódot
 
 - class neveket átírod (.btn-primary → .button--primary)
 - törölsz tokeneket / mixineket
 - teljesen másra szervezed a layout API-t
 
-**MINOR (1.1.0)**
+### MINOR (1.1.0)
 
-### Új cuccok, de nem törik el a régit:
+#### Új cuccok, de nem törik el a régit
 
 - új atom (pl. .chip, .tag)
 - új utility osztály
 - új theme / új spacing token, de a régiek maradnak
 
-**PATCH (1.0.1)**
+### PATCH (1.0.1)
 
-### Apró javítás, bugfix, vizuális finomhang:
+#### Apró javítás, bugfix, vizuális finomhang
 
 - padding kicsit jobb
 - szebbre állítod a line-height-et

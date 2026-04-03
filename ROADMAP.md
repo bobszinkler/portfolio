@@ -35,9 +35,9 @@
 
 ## v3 - React basic
 
-**Portfolio újraépítése Reactben**
+> Portfolio újraépítése Reactben
 
-### Stack
+### V3 Stack
 
 1. React
 2. components
@@ -46,9 +46,9 @@
 
 ## v4 - Modern Stack
 
-**Job-ready version**
+> Job-ready version
 
-### Stack
+### V4 Stack
 
 1. Next.js
 2. TypeScript

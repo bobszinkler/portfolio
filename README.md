@@ -20,4 +20,5 @@ Personal portfolio website built with HTML, CSS and JavaScript.
 in progress...
 
 ## Author
+
 Roland Szilágyi - Frontend Developer
