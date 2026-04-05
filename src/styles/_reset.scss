@@ -15,10 +15,6 @@ ol[role="list"] {
   list-style: none;
 }
 
-a {
-  color: var(--color-muted);
-}
-
 a:not([class]) {
   text-decoration-skip-ink: auto;
 }
@@ -34,9 +30,4 @@ svg {
 
 input, button, textarea, select {
   font: inherit;
-}
-
-html {
-  background-color: var(--color-bg);
-  color: var(--color-text)
 }

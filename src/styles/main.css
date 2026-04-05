@@ -1,15 +1,4 @@
-:root {
-  /* colors */
-  --color-bg: #16171c;
-  --color-surface: #191d21;
-  --color-primary: #22C55E;
-  --color-primary-dark: #166534;
-  --color-secondary: #3B82F6;
-  --color-secondary-dark: #1E40AF;
-  --color-text: #E5E7EB;
-  --color-muted: #9CA3AF;
-}
-
+/* ===== COLORS ===== */
 /* ===== RESET ===== */
 *,
 *::before,
@@ -25,10 +14,6 @@ figure, blockquote, dl, dd {
 ul[role=list],
 ol[role=list] {
   list-style: none;
-}
-
-a {
-  color: var(--color-muted);
 }
 
 a:not([class]) {
@@ -49,11 +34,6 @@ input, button, textarea, select {
   font: inherit;
 }
 
-html {
-  background-color: var(--color-bg);
-  color: var(--color-text);
-}
-
 /* ===== HEADER ===== */
 header {
   height: 5rem;
@@ -65,11 +45,11 @@ header .header__left {
   display: flex;
   align-items: center;
 }
-header .header__left .header__left h3 {
-  color: var(--color-primary);
+header .header__left h3 {
+  color: #22c55e;
 }
-header .header__left .header__left p {
-  color: var(--color-muted);
+header .header__left p {
+  color: #9ca3af;
 }
 header .header__right {
   display: flex;
@@ -84,6 +64,6 @@ header .header__right .header__nav .header__link {
 header .header__right .header__button {
   /* todo */
 }
-header .header__right .header__button .header__button p {
+header .header__right .header__button p {
   padding: 0.5rem;
 }

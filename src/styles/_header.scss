@@ -1,3 +1,5 @@
+@use 'globals' as *;
+
 /* ===== HEADER ===== */
 header {
   height: 5rem;
@@ -9,12 +11,12 @@ header {
     display: flex;
     align-items: center;
 
-    .header__left h3 {
-      color: var(--color-primary);
+    h3 {
+      color: $color-primary;
     }
 
-    .header__left p {
-      color: var(--color-muted);
+    p {
+      color: $color-muted;
     }
   }
 
@@ -33,7 +35,7 @@ header {
     .header__button {
       /* todo */
 
-      .header__button p {
+      p {
         padding: 0.5rem;
       }
     }
