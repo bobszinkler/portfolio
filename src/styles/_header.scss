@@ -1,0 +1,41 @@
+/* ===== HEADER ===== */
+header {
+  height: 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .header__left {
+    display: flex;
+    align-items: center;
+
+    .header__left h3 {
+      color: var(--color-primary);
+    }
+
+    .header__left p {
+      color: var(--color-muted);
+    }
+  }
+
+  .header__right {
+    display: flex;
+    align-items: center;
+
+    .header__nav {
+      /* todo */
+
+      .header__link {
+        /* todo */
+      }
+    }
+
+    .header__button {
+      /* todo */
+
+      .header__button p {
+        padding: 0.5rem;
+      }
+    }
+  }
+}
