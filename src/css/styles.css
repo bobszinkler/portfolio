@@ -15,6 +15,10 @@ ol[role="list"] {
   list-style: none;
 }
 
+a {
+  color: var(--color-muted);
+}
+
 a:not([class]) {
   text-decoration-skip-ink: auto;
 }
@@ -32,6 +36,15 @@ input, button, textarea, select {
   font: inherit;
 }
 
+html {
+  background-color: var(--color-bg);
+  color: var(--color-text)
+}
+
+.outline1 {
+  outline: 1px solid yellow;
+}
+
 :root {
   /* colors */
   --color-bg: #16171c;
@@ -42,4 +55,37 @@ input, button, textarea, select {
   --color-secondary-dark: #1E40AF;
   --color-text: #E5E7EB;
   --color-muted: #9CA3AF;
+}
+
+/* ===== HEADER ===== */
+header {
+  height: 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__left, .header__right {
+  display: flex;
+  align-items: center;
+}
+
+.header__left h3 {
+  color: var(--color-primary);
+}
+
+.header__left p {
+  color: var(--color-muted);
+}
+
+.header__nav {
+  /* todo */
+}
+
+.header__button {
+  /* todo */
+}
+
+.header__button p {
+  padding: 0.5rem;
 }
