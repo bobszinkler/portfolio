@@ -1,5 +1,14 @@
 /* ===== COLORS ===== */
+.outline {
+  outline: 1px solid yellow;
+}
+
 /* ===== RESET ===== */
+html {
+  background-color: #16181d;
+  color: #9ca3af;
+}
+
 *,
 *::before,
 *::after {
@@ -14,6 +23,11 @@ figure, blockquote, dl, dd {
 ul[role=list],
 ol[role=list] {
   list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #9ca3af;
 }
 
 a:not([class]) {
@@ -66,4 +80,47 @@ header .header__right .header__button {
 }
 header .header__right .header__button p {
   padding: 0.5rem;
+}
+
+/* ===== HERO ===== */
+main {
+  display: flex;
+  justify-content: space-between;
+}
+main .main__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+main .main__content .main__name {
+  color: #e5e7eb;
+}
+.main__buttons {
+  display: flex;
+}
+.main__buttons .main__button {
+  padding: 0.5rem 1.25rem;
+  border: none;
+  border-radius: 0.25rem;
+  margin-right: 1rem;
+}
+.main__buttons .main__button:hover {
+  cursor: pointer;
+}
+.main__buttons .main__button--work {
+  background-color: #22c55e;
+}
+.main__buttons .main__button--contact {
+  background-color: transparent;
+  color: #e5e7eb;
+  outline: 1px solid #9ca3af;
+}
+
+.main__profile {
+  width: 10rem;
+  height: 10rem;
+}
+.main__profile .main__profile__pic {
+  width: 100%;
+  height: auto;
 }

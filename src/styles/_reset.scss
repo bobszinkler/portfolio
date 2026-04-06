@@ -1,4 +1,11 @@
+@use 'globals' as *;
+
 /* ===== RESET ===== */
+html {
+  background-color: $color-bg;
+  color: $color-muted;
+}
+
 *,
 *::before,
 *::after {
@@ -13,6 +20,11 @@ figure, blockquote, dl, dd {
 ul[role="list"],
 ol[role="list"] {
   list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: $color-muted;
 }
 
 a:not([class]) {

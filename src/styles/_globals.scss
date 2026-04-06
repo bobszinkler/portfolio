@@ -1,9 +1,13 @@
 /* ===== COLORS ===== */
-$color-bg: #0f172a;
-$color-surface: #111827;
+$color-bg: #16181d;
+$color-surface: #181c20;
 $color-primary: #22c55e;
 $color-primary-dark: #16a34a;
 $color-secondary: #3b82f6;
 $color-secondary-dark: #1d4ed8;
 $color-text: #e5e7eb;
 $color-muted: #9ca3af;
+
+.outline {
+  outline: 1px solid yellow;
+}
