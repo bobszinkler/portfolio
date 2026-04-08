@@ -124,3 +124,52 @@ main .main__content .main__name {
   width: 100%;
   height: auto;
 }
+
+/* ===== TERMINAL ===== */
+.terminal__container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border: 1px solid #9ca3af;
+  border-radius: 0.75rem;
+}
+
+.terminal__header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid #9ca3af;
+}
+.terminal__header .terminal__dots {
+  display: flex;
+}
+.terminal__header .terminal__dots .terminal__dot {
+  padding-right: 0.5rem;
+  outline: 1px solid grey;
+}
+.terminal__header .terminal__title .title__text {
+  color: #22c55e;
+}
+
+.terminal__content {
+  display: flex;
+  padding: 1rem;
+  flex-direction: column;
+}
+.terminal__content .terminal__command {
+  display: flex;
+}
+.terminal__content .terminal__command .terminal__map {
+  color: #22c55e;
+}
+.terminal__content .terminal__command .terminal__text {
+  color: #9ca3af;
+}
+.terminal__content .terminal__details {
+  display: flex;
+  flex-direction: column;
+}
+.terminal__content .terminal__details .details__text {
+  color: #e5e7eb;
+}
