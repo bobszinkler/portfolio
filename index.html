@@ -7,7 +7,7 @@
   <title>Portfolio</title>
 </head>
 <body>
-  <header class="outline">
+  <header>
     <div class="header__left">
       <h3>RS</h3>
       <p>~/portfolio</p>
@@ -24,7 +24,7 @@
     </div>
   </header>
 
-  <main class="outline">
+  <main>
     <div class="main__content">
       <p class="main__intro">Hi, I am</p>
       <h2 class="main__name">Roland Szilágyi</h2>
@@ -39,6 +39,43 @@
       <img class="main__profile__pic" src="./src/assets/img/profilepic.jpg" alt="profile pic">
     </div>
   </main>
+
+  <aside class="terminal__container">
+    <div class="terminal__header">
+      <div class="terminal__dots">
+        <p class="terminal__dot  terminal__dot--close">X</p>
+        <p class="terminal__dot  terminal__dot--minimize">O</p>
+        <p class="terminal__dot  terminal__dot--maximize">L</p>
+      </div>
+      <div class="terminal__title">
+        <p class="title__text">terminal</p>
+      </div>
+    </div>
+
+    <div class="terminal__content  outline">
+      <div class="terminal__command">
+        <p class="terminal__map">roland@portfolio:</p>
+        <p class="terminal__text">~$ whoami</p>
+      </div>
+      <div class="terminal__details">
+        <p>Roland Szilágyi Frontend Developer Building fast, modern and user-focused web apps.</p>
+      </div>
+    </div>
+
+    <div class="terminal__content  outline">
+      <div class="terminal__command">
+        <p class="terminal__map">roland@portfolio:</p>
+        <p class="terminal__text">~$ skills --top</p>
+      </div>
+      <ul class="terminal__details">
+        <li>React</li>
+        <li>TypeScript</li>
+        <li>Next.js</li>
+        <li>Tailwind CSS</li>
+        <li>Framer Motion</li>
+      </ul>
+    </div>
+  </aside>
 
 </body>
 </html>
