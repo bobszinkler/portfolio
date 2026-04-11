@@ -1,0 +1,73 @@
+@use 'globals' as *;
+
+/* ===== OPEN PROJECTS ===== */
+.open__projects {
+  display: flex;
+  flex-direction: column;
+}
+
+.open__title {
+  display: flex;
+  color: $color-text;
+
+  .title__text {
+    display: flex;
+    flex-direction: column;
+
+    .title__sign {
+      color: lightblue;
+    }
+
+    .title__title {
+      color: $color-text;
+    }
+  }
+
+  .title__description {
+    display: flex;
+
+    .description__text {
+      color: $color-muted;
+    }
+  }
+}
+
+.open__cards {
+  display: flex;
+  flex-direction: column;
+}
+
+.open__card {
+  display: flex;
+  flex-direction: column;
+
+  .card__img {
+    width: 100%;
+    height: auto;
+  }
+
+  .card__text {
+    display: flex;
+    flex-direction: column;
+
+    .card__title {
+      color: $color-text;
+    }
+
+    .card__description {
+      color: $color-muted;
+    }
+  }
+
+  .card__link {
+    display: flex;
+
+    .link__open {
+      color: $color-text;
+    }
+
+    .link__projectname {
+      color: $color-primary;
+    }
+  }
+}

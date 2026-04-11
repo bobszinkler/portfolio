@@ -174,3 +174,63 @@ main .main__content .main__name {
 .terminal__content .terminal__details .details__text {
   color: #e5e7eb;
 }
+
+/* ===== OPEN PROJECTS ===== */
+.open__projects {
+  display: flex;
+  flex-direction: column;
+}
+
+.open__title {
+  display: flex;
+  color: #e5e7eb;
+}
+.open__title .title__text {
+  display: flex;
+  flex-direction: column;
+}
+.open__title .title__text .title__sign {
+  color: lightblue;
+}
+.open__title .title__text .title__title {
+  color: #e5e7eb;
+}
+.open__title .title__description {
+  display: flex;
+}
+.open__title .title__description .description__text {
+  color: #9ca3af;
+}
+
+.open__cards {
+  display: flex;
+  flex-direction: column;
+}
+
+.open__card {
+  display: flex;
+  flex-direction: column;
+}
+.open__card .card__img {
+  width: 100%;
+  height: auto;
+}
+.open__card .card__text {
+  display: flex;
+  flex-direction: column;
+}
+.open__card .card__text .card__title {
+  color: #e5e7eb;
+}
+.open__card .card__text .card__description {
+  color: #9ca3af;
+}
+.open__card .card__link {
+  display: flex;
+}
+.open__card .card__link .link__open {
+  color: #e5e7eb;
+}
+.open__card .card__link .link__projectname {
+  color: #22c55e;
+}
