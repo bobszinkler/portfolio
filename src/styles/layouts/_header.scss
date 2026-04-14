@@ -1,0 +1,48 @@
+@use '../base/index' as *;
+@use '../tokens/index' as *;
+@use '../mixins/index' as *;
+
+header {
+  height: 5rem;
+  background-color: $role-bg;
+}
+
+.header__head {
+
+  .header__title {
+    color: $role-primary;
+  }
+
+  .header__label {
+    color: $role-muted;
+  }
+}
+
+.header__nav {
+
+  .header__links {
+    display: none;
+    @include screen(tablet) {
+      display: block;
+    }
+
+    .header__link {
+      color: $role-muted;
+      text-decoration: none;
+    }
+
+    .header__link:hover {
+      color: $role-link-hover;
+      cursor: pointer;
+      text-decoration: underline;
+    }
+  }
+
+  .header__button {
+    @include screen(tablet) {
+      display: none;
+    }
+
+    button {}
+  }
+}

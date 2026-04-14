@@ -1,0 +1,41 @@
+@use '../base/index' as *;
+@use '../tokens/index' as *;
+@use '../mixins/index' as *;
+
+main {
+  background-color: $role-bg;
+  outline: 1px solid yellow;
+
+  .main__content {
+
+    .main__intro {
+      color: $role-muted;
+    }
+
+    .main__name {
+      color: $role-primary;
+    }
+
+    .main__descriptions {
+
+      .main__description {
+        color: $role-muted;
+      }
+    }
+
+    .main__buttons {
+      // button & button-primary
+      // button & button-secondary
+    }
+  }
+
+  .main__profile {
+    @include border-thin-strong;
+    @include radius-soft;
+
+    .main__profile__pic {
+      width: 12rem;
+      height: 12rem;
+    }
+  }
+}
