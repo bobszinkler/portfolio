@@ -8,6 +8,7 @@
  fix_     - javított hiba
  refact_  - kényelmi vagy teljesítményi módosítás
  chore_   - file-ok hozzáadása, törlése
+ doc_     - dokumentáció írása
 
  ds_        - design-system fejelsztés
  template_  - template fejlesztés
