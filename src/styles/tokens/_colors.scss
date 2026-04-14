@@ -1,0 +1,47 @@
+/* ===== BRANDS ===== */
+$color-primary:        #22c55e;
+$color-primary-dark:   #16a34a;
+$color-secondary:      #3b82f6;
+$color-secondary-dark: #1d4ed8;
+
+/* ===== NEUTRALS ===== */
+$color-neutral-100: #FFFFFF;
+$color-neutral-200: #E2E4E9;
+$color-neutral-300: #C4C9D4;
+$color-neutral-500: #9ca3af;
+$color-neutral-700: #2B303B;
+$color-neutral-800: #16181D;
+$color-neutral-900: #0B0C0F;
+
+/* ===== STATES ===== */
+$color-state-info:    #1d4ed8;
+$color-state-success: #16a34a;
+$color-state-warning: #fcdc0a;
+$color-state-danger:  #e01e3e;
+
+/* ===== ROLES ===== */
+$role-primary:          $color-primary;
+$role-primary-dark:     $color-primary-dark;
+$role-primary-hover:    $color-primary-dark;
+$role-secondary:        $color-secondary;
+$role-secondary-dark:   $color-secondary-dark;
+$role-secondary-hover:  $color-secondary-dark;
+
+$role-bg:            $color-neutral-800;
+$role-text:          $color-neutral-200;
+$role-muted:         $color-neutral-500;
+$role-link:          $color-primary;
+$role-link-hover:    $color-primary-dark;
+
+$role-info:          $color-state-info;
+$role-success:       $color-state-success;
+$role-warning:       $color-state-warning;
+$role-danger:        $color-state-danger;
+
+$role-surface-1:     $color-neutral-800;
+$role-surface-2:     $color-neutral-700;
+$role-border:        $color-neutral-300;
+
+$role-overlay-light:  rgba(0,0,0,.20);     // enyhe sötétítés képek fölé
+$role-overlay-mid:    rgba(0,0,0,.40);     // alap overlay modal-okhoz
+$role-overlay-strong: rgba(0,0,0,.50);     // erős, ha a háttér szinte teljesen eltűnjön
