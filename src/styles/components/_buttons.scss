@@ -1,0 +1,47 @@
+@use '../tokens/index' as *;
+
+/* ===== BUTTONS ===== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: $space-2 $space-4;
+  border-radius: $radius-md;
+  border: 1px solid $role-muted;
+  cursor: pointer;
+  text-decoration: none;
+  background-color: $role-primary;
+  color: $role-primary;
+  transition:
+    background-color 100ms ease-out, color 100ms ease-out,
+    border-color 100ms ease-out,
+    box-shadow 100ms ease-out,
+    transform 80ms ease-out;
+}
+
+.btn:disabled,
+.btn[aria-disabled="true"] {
+  cursor: not-allowed;
+  opacity: 0.6;
+  transform: none;
+  box-shadow: none;
+}
+
+.btn--primary {
+  background-color: $role-primary;
+  color: $role-surface-1;
+}
+
+.btn--primary:hover {
+  background-color: $role-primary-dark;
+}
+
+.btn--secondary {
+  background-color: transparent;
+  color: $role-primary;
+  border-color: 1px solid grey;
+}
+
+.btn--secondary:hover {
+  color: $role-primary-dark;
+}
