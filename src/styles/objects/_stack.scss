@@ -1,0 +1,25 @@
+@use '../tokens/index' as *;
+
+// mit csinál : függőlegesen egymás alá rendezi a gyerekeket, gap-pel
+// hol használatos : hero szövegblokk, form blokkok, card content, section belsők
+
+/* ===== STACK OBJECT ===== */
+.o-stack {
+  display: flex;
+  flex-direction: column;
+  gap: $space-4;
+}
+
+/* ===== GAP SCALE ===== */
+.o-stack--xs { gap: $space-2; }
+.o-stack--sm { gap: $space-3; }
+.o-stack--md { gap: $space-4; }
+.o-stack--lg { gap: $space-6; }
+.o-stack--xl { gap: $space-7; }
+
+/* ===== HORIZONTAL POSITIONS ===== */
+.o-stack--start   { align-items: flex-start; }
+.o-stack--center  { align-items: center; }
+.o-stack--end     { align-items: flex-end; }
+.o-stack--between { align-items: space-between; }
+.o-stack--evenly  { align-items: space-evenly; }

@@ -1,0 +1,36 @@
+@use '../tokens/index' as *;
+
+// mit csinál : grid elrendezést ad egységes gap-pel
+// hol használatos : kártyák, galéria, feature blokkok, footer oszlopok
+
+/* ===== GRID OBJECT ===== */
+.o-grid {
+  display: grid;
+  gap: $space-4;
+}
+
+/* ===== FIX COLUMNS ===== */
+.o-grid--2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.o-grid--3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.o-grid--4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+
+/* ===== CARDGRID: AUTOMATIC BREAK ===== */
+.o-grid--auto {
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+/* ===== GAP SCALE ===== */
+.o-grid--gap-xs { gap: $space-2; }
+.o-grid--gap-sm { gap: $space-3; }
+.o-grid--gap-md { gap: $space-4; }
+.o-grid--gap-lg { gap: $space-6; }
+.o-grid--gap-xl { gap: $space-7; }
+
+/* ===== ON MOBILE FIX FOR FIRST COLUMN ===== */
+@media (max-width: 768px) {
+  .o-grid--2,
+  .o-grid--3,
+  .o-grid--4 {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,17 @@
+@use '../tokens/index' as *;
+
+// mit csinál : max szélesség + oldal padding, középre igazít
+// hol használatos : header, main szekciók, footer belső tartalma
+
+/* ===== CONTAINER OBJECT ===== */
+.o-container {
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: $space-3;
+}
+
+/* ===== CONTAINER VARIANTS ===== */
+.o-container--narrow { max-width: 860px; }
+.o-container--wide   { max-width: 1400px; }
+.o-container--flush  { padding-inline: 0; }

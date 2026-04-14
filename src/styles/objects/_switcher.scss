@@ -1,0 +1,21 @@
+@use '../tokens/index' as *;
+
+// mit csinál : több elemet egymás mellé tesz, de min szélesség alapján 1 oszlopra vált
+// hol használatos : kép+szöveg blokkok (hero/about), feature szekciók, kétoszlopos content
+
+/* ===== SWITCHER OBJECT ===== */
+.o-switcher {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--switcher-gap, #{$space-6});
+}
+
+/* ===== MÉRET VARIANTS ===== */
+.o-switcher--tight { --switcher-gap: #{$space-4}; }
+.o-switcher--loose { --switcher-gap: #{$space-7}; }
+
+/* ===== GYEREKEK UGYANAKKORA SZÉLESSÉG, MINIMUM ALAPJÁN TÖRNEK ===== */
+.o-switcher > * {
+  flex-grow: 1;
+  flex-basis: calc(var(--switcher-min, 45rem) - 100%);
+}

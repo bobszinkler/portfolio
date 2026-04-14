@@ -1,0 +1,18 @@
+@use '../tokens/index' as *;
+
+// mit csinál : egységes függőleges paddinget ad nagy oldalszekcióknak
+// hol használatos : hero, rólunk, étlap, ajánlatok, kapcsolat blokkok
+
+/* ===== SECTION OBJECT ===== */
+.o-section {
+  padding-block: $space-6;
+}
+
+/* ===== SECTION VARIANTS ===== */
+.o-section--tight { padding-block: $space-5;}
+.o-section--loose { padding-block: $space-7;}
+.o-section--muted { background-color: $color-surface-2;}
+.o-section--full { width: 100%;}
+
+/* ===== DIVIDER ===== */
+.o-section--divider { border-block: 1px solid $color-neutral-200; }

@@ -1,0 +1,22 @@
+@use '../tokens/index' as *;
+
+// mit csinál : elemeket vízszintesen sorba rak, törhető sorral és gap-pel
+// hol használatos : navigáció, gombsorok, badge/ikon sorok
+
+/* ===== INLINE OBJECT ===== */
+.o-inline {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: $space-4;
+}
+
+/* ===== JUSTIFY VARIANTS ===== */
+.o-inline--start   { justify-content: flex-start; }
+.o-inline--center  { justify-content: center; }
+.o-inline--end     { justify-content: flex-end; }
+.o-inline--between { justify-content: space-between; }
+.o-inline--evenly  { justify-content: space-evenly; }
+
+/* ===== WRAP KONTROLL ===== */
+.o-inline--nowrap { flex-wrap: nowrap; }
