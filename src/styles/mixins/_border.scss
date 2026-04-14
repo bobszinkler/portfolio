@@ -1,0 +1,42 @@
+@use '../tokens/border' as *;
+
+/* ===== INSIDE HELPER (DON'T CALL) ===== */
+@mixin _border-apply($side, $width, $color, $style: $border-style) {
+  @if $side == all {
+    border: $width $style $color;
+  } @else if ($side == x) {
+    border-left:  $width $style $color;
+    border-right: $width $style $color;
+  } @else if ($side == y) {
+    border-top:    $width $style $color;
+    border-bottom: $width $style $color;
+  } @else if ($side == top) {
+    border-top: $width $style $color;
+  } @else if ($side == right) {
+    border-right: $width $style $color;
+  } @else if ($side == bottom) {
+    border-bottom: $width $style $color;
+  } @else if ($side == left) {
+    border-left: $width $style $color;
+  } @else {
+    border: $width $style $color;
+  }
+}
+
+/* ===== THIN VARIANT ===== */
+@mixin border-thin-normal($side: all) {
+  @include _border-apply($side, $border-width-thin, $border-color);
+}
+
+@mixin border-thin-strong($side: all) {
+  @include _border-apply($side, $border-width-thin, $border-color);
+}
+
+/* ===== THICK VARIANT ===== */
+@mixin border-thick-normal($side: all) {
+  @include _border-apply($side, $border-width-thick, $border-color);
+}
+
+@mixin border-thick-strong($side: all) {
+  @include _border-apply($side, $border-width-thick, $border-color);
+}
