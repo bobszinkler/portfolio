@@ -1,0 +1,14 @@
+/* ===== UTILITIES DEBUG ===== */
+header.debug   { background-color: rgba(91, 141, 239, 0.5); }
+nav.debug      { background-color: rgba(100, 210, 255, 0.5); }
+main.debug     { background-color: rgba(88, 232, 122, 0.5); }
+section.debug  { background-color: rgba(255, 216, 117, 0.5); }
+article.debug  { background-color: rgba(255, 159, 90, 0.5); }
+aside.debug    { background-color: rgba(255, 92, 141, 0.5); }
+footer.debug   { background-color: rgba(191, 90, 242, 0.5); }
+form.debug     { background-color: rgba(163, 242, 224, 0.5); }
+figure.debug   { background-color: rgba(225, 225, 225, 0.5); }
+dialog.debug   { background-color: rgba(197, 175, 255, 0.5); }
+
+.u-outline             { outline: 1px dashed black };
+.u-outline-strong      { outline: 2px solid red };
