@@ -4,12 +4,20 @@
 html {
   background-color: $color-bg;
   color: $color-muted;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
 }
 
 *,
 *::before,
 *::after {
   box-sizing: border-box;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 body, h1, h2, h3, h4, h5, h6, p,
@@ -42,4 +50,9 @@ svg {
 
 input, button, textarea, select {
   font: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
 }
