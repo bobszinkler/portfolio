@@ -3,6 +3,10 @@
   outline: 1px solid yellow;
 }
 
+/* ===== SPACING ===== */
+/* ===== RADIUS ===== */
+/* ===== BORDERS ===== */
+/* ===== SHADOWS ===== */
 /* ===== RESET ===== */
 html {
   background-color: #16181d;
@@ -82,99 +86,6 @@ header .header__right .header__button p {
   padding: 0.5rem;
 }
 
-/* ===== HERO ===== */
-main {
-  display: flex;
-  justify-content: space-between;
-}
-main .main__content {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-}
-main .main__content .main__name {
-  color: #e5e7eb;
-}
-.main__buttons {
-  display: flex;
-}
-.main__buttons .main__button {
-  padding: 0.5rem 1.25rem;
-  border: none;
-  border-radius: 0.25rem;
-  margin-right: 1rem;
-}
-.main__buttons .main__button:hover {
-  cursor: pointer;
-}
-.main__buttons .main__button--work {
-  background-color: #22c55e;
-}
-.main__buttons .main__button--contact {
-  background-color: transparent;
-  color: #e5e7eb;
-  outline: 1px solid #9ca3af;
-}
-
-.main__profile {
-  width: 10rem;
-  height: 10rem;
-}
-.main__profile .main__profile__pic {
-  width: 100%;
-  height: auto;
-}
-
-/* ===== TERMINAL ===== */
-.terminal__container {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  background-color: #181c20;
-  border: 1px solid #9ca3af;
-  border-radius: 0.75rem;
-}
-
-.terminal__header {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  padding: 1rem;
-  border-bottom: 1px solid #9ca3af;
-}
-.terminal__header .terminal__dots {
-  display: flex;
-}
-.terminal__header .terminal__dots .terminal__dot {
-  padding-right: 0.5rem;
-  outline: 1px solid grey;
-}
-.terminal__header .terminal__title .title__text {
-  color: #22c55e;
-}
-
-.terminal__content {
-  display: flex;
-  padding: 1rem;
-  flex-direction: column;
-}
-.terminal__content .terminal__command {
-  display: flex;
-}
-.terminal__content .terminal__command .terminal__map {
-  color: #22c55e;
-}
-.terminal__content .terminal__command .terminal__text {
-  color: #9ca3af;
-}
-.terminal__content .terminal__details {
-  display: flex;
-  flex-direction: column;
-}
-.terminal__content .terminal__details .details__text {
-  color: #e5e7eb;
-}
-
 /* ===== OPEN PROJECTS ===== */
 .open__projects {
   display: flex;
@@ -235,4 +146,54 @@ main .main__content .main__name {
 }
 .open__card .card__link .link__projectname {
   color: #22c55e;
+}
+
+/* ===== TERMINAL ===== */
+.terminal__container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: #181c20;
+  border: 1px solid #9ca3af;
+  border-radius: 0.75rem;
+}
+
+.terminal__header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid #9ca3af;
+}
+.terminal__header .terminal__dots {
+  display: flex;
+}
+.terminal__header .terminal__dots .terminal__dot {
+  padding-right: 0.5rem;
+  outline: 1px solid grey;
+}
+.terminal__header .terminal__title .title__text {
+  color: #22c55e;
+}
+
+.terminal__content {
+  display: flex;
+  padding: 1rem;
+  flex-direction: column;
+}
+.terminal__content .terminal__command {
+  display: flex;
+}
+.terminal__content .terminal__command .terminal__map {
+  color: #22c55e;
+}
+.terminal__content .terminal__command .terminal__text {
+  color: #9ca3af;
+}
+.terminal__content .terminal__details {
+  display: flex;
+  flex-direction: column;
+}
+.terminal__content .terminal__details .details__text {
+  color: #e5e7eb;
 }
