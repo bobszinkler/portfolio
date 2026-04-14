@@ -1,0 +1,10 @@
+/* ===== UTILITIES LAYOUT ===== */
+.u-hidden           { display: none !important; }
+.u-overflow-hidden  { overflow: hidden !important; }
+.u-w-full           { width: 100% !important; }
+.u-center           { margin-inline: auto !important; }
+
+.u-sticky {
+  position: sticky !important;
+  top: 0;
+}

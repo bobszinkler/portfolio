@@ -1,0 +1,5 @@
+/* ===== UTILITIES MEASURE (text width) ===== */
+.u-measure          { max-inline-size: 65ch; }   // ideális alap}
+.u-measure--xs      { max-inline-size: 45ch; }   // nagyon szűk
+.u-measure--narrow  { max-inline-size: 55ch; }   // szük, fókuszált
+.u-measure--wide    { max-inline-size: 75ch; }   // szélesebb, még komfortos
