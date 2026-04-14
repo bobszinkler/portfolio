@@ -2,5 +2,7 @@
 @use './tokens/index' as *;
 @use './mixins/index' as *;
 @use './components/index' as *;
+@use './objects/index' as *;
 
+@use './layouts/index' as *;
 @use './sections/index' as *;
