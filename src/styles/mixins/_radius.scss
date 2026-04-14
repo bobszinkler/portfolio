@@ -1,0 +1,39 @@
+@use '../tokens/radius' as *;
+
+/* ===== INSIDE HELPER (DON'T CALL) ===== */
+@mixin _radius-apply($side, $value) {
+  @if $side == all {
+    border-radius: $value;
+  } @else if $side == top {
+    border-top-left-radius: $value;
+    border-top-right-radius: $value;
+  } @else if $side == bottom {
+    border-bottom-left-radius: $value;
+    border-bottom-right-radius: $value;
+  } @else if $side == left {
+    border-top-left-radius: $value;
+    border-bottom-left-radius: $value;
+  } @else if $side == right {
+    border-top-right-radius: $value;
+    border-bottom-right-radius: $value;
+  } @else {
+    border-radius: $value;
+  }
+}
+
+/* ===== VARIANTS ===== */
+@mixin radius-minimal($side: all) {
+  @include _radius-apply($side, $radius-xs);
+}
+
+@mixin radius-soft($side: all) {
+  @include _radius-apply($side, $radius-sm);
+}
+
+@mixin radius-strong($side: all) {
+  @include _radius-apply($side, $radius-md);
+}
+
+@mixin radius-pill($side: all) {
+  @include _radius-apply($side, $radius-pill);
+}

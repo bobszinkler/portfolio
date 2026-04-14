@@ -1,0 +1,13 @@
+@use '../tokens/shadow' as *;
+
+/* ===== BASIC ===== */
+@mixin shadow($value: $shadow-sm) { box-shadow: $value; }
+
+/* ===== VARIANTS ===== */
+@mixin shadow-none  { box-shadow: $shadow-none; }
+@mixin shadow-sm    { box-shadow: $shadow-sm; }       // card mobile
+@mixin shadow-md    { box-shadow: $shadow-md; }       // card desktop
+@mixin shadow-lg    { box-shadow: $shadow-lg; }       // kiemelet / overlay
+@mixin shadow-xl    { box-shadow: $shadow-xl; }       // kiemelet / overlay
+@mixin shadow-inset { box-shadow: $shadow-inset; }    // input field
+
