@@ -1,56 +1,19 @@
-/* ===== COLORS ===== */
-$color-bg: #16181d;
-$color-surface: #181c20;
-$color-primary: #22c55e;
-$color-primary-dark: #16a34a;
-$color-secondary: #3b82f6;
-$color-secondary-dark: #1d4ed8;
-$color-text: #e5e7eb;
-$color-muted: #9ca3af;
-
-.outline {
-  outline: 1px solid yellow;
+/* ===== GLOBALS ===== */
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
 }
 
-/* ===== SPACING ===== */
-$space-1: 0.25rem;    // 4px
-$space-2: 0.5rem;     // 8px
-$space-3: 0.75rem;    // 12px
-$space-4: 1rem;       // 16px
-$space-5: 2rem;       // 32px
-$space-6: 4rem;       // 64px
-$space-7: 6rem;       // 96px
-$space-8: 8rem;       // 128px
+body {
+  min-height: 100vh;    // fallback
+  min-height: 100dvh;   // modern override
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
 
-/* ===== RADIUS ===== */
-$radius-none: 0 !default;
-$radius-xs:   4px !default;     // finom sarkítás (inputok, kisebb elemek)
-$radius-sm:   6px !default;     // gombok, kisebb kártyák
-$radius-md:   8px !default;     // alap kártya, szekció doboz
-$radius-lg:   12px !default;    // kiemelt kártya, nagyobb panelek
-$radius-pill: 999px !default;
-
-/* ===== BORDERS ===== */
-$border-style: solid !default;
-$border-width-thin: 1px !default;
-$border-width-thick: 2px !default;
-$border-color: rgba(0, 0, 0, 0.12) !default;
-$border-color-strong: rgba(0, 0, 0, 0.18) !default;
-$border-color-inverse: rgba(255, 255, 255, 0.25) !default;
-
-/* ===== SHADOWS ===== */
-$shadow-none: none !default;
-
-$shadow-sm: 0 1px 2px rgba(0,0,0,.16),
-            0 2px 4px rgba(0,0,0,.10) !default;
-
-$shadow-md: 0 2px 4px rgba(0,0,0,.16),
-            0 6px 12px rgba(0,0,0,.10) !default;
-
-$shadow-lg: 0 4px 6px rgba(0,0,0,.16),
-            0 12px 24px rgba(0,0,0,.12) !default;
-
-$shadow-xl: 0 8px 10px rgba(0,0,0,.16),
-            0 20px 40px rgba(0,0,0,.14) !default;
-
-$shadow-inset: inset 0 1px 2px rgba(0, 0, 0, .08) !default; // To Input fields
+:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
