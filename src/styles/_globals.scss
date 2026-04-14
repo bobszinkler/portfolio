@@ -11,3 +11,46 @@ $color-muted: #9ca3af;
 .outline {
   outline: 1px solid yellow;
 }
+
+/* ===== SPACING ===== */
+$space-1: 0.25rem;    // 4px
+$space-2: 0.5rem;     // 8px
+$space-3: 0.75rem;    // 12px
+$space-4: 1rem;       // 16px
+$space-5: 2rem;       // 32px
+$space-6: 4rem;       // 64px
+$space-7: 6rem;       // 96px
+$space-8: 8rem;       // 128px
+
+/* ===== RADIUS ===== */
+$radius-none: 0 !default;
+$radius-xs:   4px !default;     // finom sarkítás (inputok, kisebb elemek)
+$radius-sm:   6px !default;     // gombok, kisebb kártyák
+$radius-md:   8px !default;     // alap kártya, szekció doboz
+$radius-lg:   12px !default;    // kiemelt kártya, nagyobb panelek
+$radius-pill: 999px !default;
+
+/* ===== BORDERS ===== */
+$border-style: solid !default;
+$border-width-thin: 1px !default;
+$border-width-thick: 2px !default;
+$border-color: rgba(0, 0, 0, 0.12) !default;
+$border-color-strong: rgba(0, 0, 0, 0.18) !default;
+$border-color-inverse: rgba(255, 255, 255, 0.25) !default;
+
+/* ===== SHADOWS ===== */
+$shadow-none: none !default;
+
+$shadow-sm: 0 1px 2px rgba(0,0,0,.16),
+            0 2px 4px rgba(0,0,0,.10) !default;
+
+$shadow-md: 0 2px 4px rgba(0,0,0,.16),
+            0 6px 12px rgba(0,0,0,.10) !default;
+
+$shadow-lg: 0 4px 6px rgba(0,0,0,.16),
+            0 12px 24px rgba(0,0,0,.12) !default;
+
+$shadow-xl: 0 8px 10px rgba(0,0,0,.16),
+            0 20px 40px rgba(0,0,0,.14) !default;
+
+$shadow-inset: inset 0 1px 2px rgba(0, 0, 0, .08) !default; // To Input fields

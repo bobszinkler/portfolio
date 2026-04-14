@@ -34,12 +34,14 @@
 
 .open__cards {
   display: flex;
-  flex-direction: column;
 }
 
 .open__card {
   display: flex;
   flex-direction: column;
+  background-color: $color-surface;
+  border: 1px solid $color-muted;
+  border-radius: 0.75rem;
 
   .card__img {
     width: 100%;

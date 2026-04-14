@@ -204,12 +204,14 @@ main .main__content .main__name {
 
 .open__cards {
   display: flex;
-  flex-direction: column;
 }
 
 .open__card {
   display: flex;
   flex-direction: column;
+  background-color: #181c20;
+  border: 1px solid #9ca3af;
+  border-radius: 0.75rem;
 }
 .open__card .card__img {
   width: 100%;
