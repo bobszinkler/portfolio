@@ -1,18 +1,48 @@
 @use '../tokens/index' as *;
+@use '../mixins/index' as *;
 
-// mit csinál : egységes függőleges paddinget ad nagy oldalszekcióknak
-// hol használatos : hero, rólunk, étlap, ajánlatok, kapcsolat blokkok
+// SZEKCIÓ (VERTIKÁLIS SPACING)
+// Egységes felső/alsó padding nagy tartalmi blokkokhoz
+// Ritmust és “levegőt” ad az oldalnak
+// USING: hero, about, contact, stb.
 
 /* ===== SECTION OBJECT ===== */
 .o-section {
   padding-block: $space-6;
+
+  @include screen(tablet) {
+    padding-block: $space-7;
+  }
+
+  @include screen(desktop) {
+    padding-block: $space-8;
+  }
 }
 
-/* ===== SECTION VARIANTS ===== */
-.o-section--tight { padding-block: $space-5;}
-.o-section--loose { padding-block: $space-7;}
-.o-section--muted { background-color: $role-surface-2;}
-.o-section--full { width: 100%;}
+/* ===== SPACING VARIANTS ===== */
+.o-section--tight { padding-block: $space-5; }
+.o-section--loose { padding-block: $space-7; }
+
+/* ===== BACKGROUND VARIANTS ===== */
+.o-section--muted {
+  background-color: $role-surface-2;
+}
 
 /* ===== DIVIDER ===== */
-.o-section--divider { border-block: 1px solid $color-neutral-200; }
+.o-section--divider {
+  border-block: 1px solid $color-neutral-200;
+}
+
+/*
+<section class="o-section">
+  <div class="o-container">
+    ...
+  </div>
+</section>
+
+<section class="o-section o-section--muted">
+  <div class="o-container">
+    ...
+  </div>
+</section>
+*/

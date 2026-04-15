@@ -1,7 +1,9 @@
 @use '../tokens/index' as *;
+@use '../mixins/index' as *;
 
-// mit csinál : grid elrendezést ad egységes gap-pel
-// hol használatos : kártyák, galéria, feature blokkok, footer oszlopok
+// GRID (KOMPLEX ELRENDEZÉS)
+// Több oszlopos layout, pontos kontroll oszlopokra és törésekre
+// USING: kártyák, galéria, feature blokkok, footer oszlopok
 
 /* ===== GRID OBJECT ===== */
 .o-grid {
@@ -9,12 +11,34 @@
   gap: $space-4;
 }
 
-/* ===== FIX COLUMNS ===== */
-.o-grid--2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-.o-grid--3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-.o-grid--4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+/* ===== FIX COLUMNS (MOBILE-FIRST) ===== */
+.o-grid--2 {
+  @include screen(tablet) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
 
-/* ===== CARDGRID: AUTOMATIC BREAK ===== */
+.o-grid--3 {
+  @include screen(tablet) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @include screen(desktop) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.o-grid--4 {
+  @include screen(tablet) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @include screen(desktop) {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+/* ===== AUTO GRID (RESPONSIVE) ===== */
 .o-grid--auto {
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 }
@@ -26,11 +50,16 @@
 .o-grid--gap-lg { gap: $space-6; }
 .o-grid--gap-xl { gap: $space-7; }
 
-/* ===== ON MOBILE FIX FOR FIRST COLUMN ===== */
-@media (max-width: 768px) {
-  .o-grid--2,
-  .o-grid--3,
-  .o-grid--4 {
-    grid-template-columns: 1fr;
-  }
-}
+/*
+<div class="o-grid o-grid--auto">
+  <div>Card</div>
+  <div>Card</div>
+  <div>Card</div>
+</div>
+
+<div class="o-grid o-grid--3">
+  <div>Item</div>
+  <div>Item</div>
+  <div>Item</div>
+</div>
+*/

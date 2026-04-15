@@ -2,9 +2,16 @@
 @use '../tokens/index' as *;
 @use '../mixins/index' as *;
 
-main {
+.main {
   background-color: $role-bg;
+  align-items: center;
   outline: 1px solid yellow;
+
+  @include screen(tablet) {
+    flex-direction: row;
+    justify-content: space-around;
+    max-width: 860px;
+  }
 
   .main__content {
 
@@ -34,8 +41,8 @@ main {
     @include radius-soft;
 
     .main__profile__pic {
-      width: 12rem;
-      height: 12rem;
+      width: 14rem;
+      height: 14rem;
     }
   }
 }

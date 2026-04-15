@@ -1,4 +1,8 @@
 @charset "UTF-8";
+/* ===== BRANDS ===== */
+/* ===== NEUTRALS ===== */
+/* ===== STATES ===== */
+/* ===== ROLES ===== */
 /* ===== GLOBALS ===== */
 html {
   font-size: 16px;
@@ -12,6 +16,7 @@ body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  background-color: #16181D;
 }
 
 :focus-visible {
@@ -57,10 +62,6 @@ input, button, textarea, select {
   font: inherit;
 }
 
-/* ===== BRANDS ===== */
-/* ===== NEUTRALS ===== */
-/* ===== STATES ===== */
-/* ===== ROLES ===== */
 /* ===== BASIC ===== */
 /* ===== PADDING TOKENS (FOR COMPONENTS) ===== */
 /* --- AROUND --- */
@@ -498,24 +499,32 @@ header {
     display: none;
   }
 }
-main {
+.main {
   background-color: #16181D;
+  align-items: center;
   outline: 1px solid yellow;
 }
-main .main__content .main__intro {
+@media (min-width: 768px) {
+  .main {
+    flex-direction: row;
+    justify-content: space-around;
+    max-width: 860px;
+  }
+}
+.main .main__content .main__intro {
   color: #9ca3af;
 }
-main .main__content .main__name {
+.main .main__content .main__name {
   color: #22c55e;
 }
-main .main__content .main__descriptions .main__description {
+.main .main__content .main__descriptions .main__description {
   color: #9ca3af;
 }
-main .main__profile {
+.main .main__profile {
   border: 1px solid rgba(255, 255, 255, 0.88);
   border-radius: 6px;
 }
-main .main__profile .main__profile__pic {
-  width: 12rem;
-  height: 12rem;
+.main .main__profile .main__profile__pic {
+  width: 14rem;
+  height: 14rem;
 }

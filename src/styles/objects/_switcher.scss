@@ -1,7 +1,9 @@
 @use '../tokens/index' as *;
 
-// mit csinál : több elemet egymás mellé tesz, de min szélesség alapján 1 oszlopra vált
-// hol használatos : kép+szöveg blokkok (hero/about), feature szekciók, kétoszlopos content
+// SWITCHER (RESPONSIVE FLEX LAYOUT)
+// Elemek egymás mellé kerülnek, DE ha nincs elég hely,
+// automatikusan egymás alá törnek (breakpoint nélkül)
+// USING: kép + szöveg (hero/about), 2 oszlopos blokkok
 
 /* ===== SWITCHER OBJECT ===== */
 .o-switcher {
@@ -10,12 +12,29 @@
   gap: var(--switcher-gap, #{$space-6});
 }
 
-/* ===== MÉRET VARIANTS ===== */
+/* ===== GAP VARIANTS ===== */
 .o-switcher--tight { --switcher-gap: #{$space-4}; }
 .o-switcher--loose { --switcher-gap: #{$space-7}; }
 
-/* ===== GYEREKEK UGYANAKKORA SZÉLESSÉG, MINIMUM ALAPJÁN TÖRNEK ===== */
+/* ===== CHILD BEHAVIOR ===== */
 .o-switcher > * {
   flex-grow: 1;
-  flex-basis: calc(var(--switcher-min, 45rem) - 100%);
+  flex-basis: calc(var(--switcher-min, 30rem) - 100%);
 }
+
+/* ===== SIZE CONTROL ===== */
+.o-switcher--sm { --switcher-min: 20rem; }
+.o-switcher--md { --switcher-min: 30rem; }
+.o-switcher--lg { --switcher-min: 40rem; }
+
+/*
+<div class="o-switcher">
+  <div>Text</div>
+  <div>Image</div>
+</div>
+
+<div class="o-switcher o-switcher--sm">
+  <div>Left</div>
+  <div>Right</div>
+</div>
+*/

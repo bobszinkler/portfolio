@@ -1,0 +1,58 @@
+@use '../tokens/index' as *;
+
+// VÍZSZINTES ELRENDEZÉS (ROW)
+// Gyerek elemek egymás mellett, wrap + gap
+// Automatikusan törik több sorba ha nincs hely
+// USING: gombcsoport, navbar, tagek, ikon + szöveg sor
+
+/* ===== ROW OBJECT ===== */
+.o-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: $space-3;
+}
+
+/* ===== JUSTIFY (HORIZONTAL) ===== */
+.o-row--start   { justify-content: flex-start; }
+.o-row--center  { justify-content: center; }
+.o-row--end     { justify-content: flex-end; }
+.o-row--between { justify-content: space-between; }
+.o-row--evenly  { justify-content: space-evenly; }
+
+/* ===== ALIGN (VERTICAL) ===== */
+.o-row--top    { align-items: flex-start; }
+.o-row--middle { align-items: center; }
+.o-row--bottom { align-items: flex-end; }
+
+/* ===== WRAP CONTROL ===== */
+.o-row--nowrap { flex-wrap: nowrap; }
+
+/* ===== GAP VARIANTS ===== */
+.o-row--xs { gap: $space-2; }
+.o-row--sm { gap: $space-3; }
+.o-row--md { gap: $space-4; }
+.o-row--lg { gap: $space-6; }
+.o-row--xl { gap: $space-7; }
+
+/*
+<div class="o-row">
+  <button>One</button>
+  <button>Two</button>
+</div>
+
+<div class="o-row o-row--between">
+  <span>Left</span>
+  <span>Right</span>
+</div>
+
+<div class="o-row o-row--center o-row--sm">
+  <button>A</button>
+  <button>B</button>
+</div>
+
+<div class="o-row o-row--nowrap">
+  <span>icon</span>
+  <span>text</span>
+</div>
+*/

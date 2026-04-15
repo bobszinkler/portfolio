@@ -1,6 +1,6 @@
-@use './cluster';
-@use './containers';
-@use './grid';
+@use './row';         // cluster
+@use './container';   // containers
+@use './grid';        // grid
 @use './inline';
 @use './section';
 @use './stack';

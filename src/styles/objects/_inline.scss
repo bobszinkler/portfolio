@@ -1,22 +1,44 @@
 @use '../tokens/index' as *;
 
-// mit csinál : elemeket vízszintesen sorba rak, törhető sorral és gap-pel
-// hol használatos : navigáció, gombsorok, badge/ikon sorok
+// INLINE SOR (EGYSOROS, NO WRAP)
+// Elemek egymás mellett, törés nélkül (egysoros)
+// Kisebb, szorosabb elrendezés mint a row (cluster)
+// USING: ikon + szöveg, rövid link lista, badge-ek
 
 /* ===== INLINE OBJECT ===== */
 .o-inline {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   align-items: center;
-  gap: $space-4;
+  gap: $space-3;
 }
 
-/* ===== JUSTIFY VARIANTS ===== */
+/* ===== JUSTIFY (HORIZONTAL) ===== */
 .o-inline--start   { justify-content: flex-start; }
 .o-inline--center  { justify-content: center; }
 .o-inline--end     { justify-content: flex-end; }
 .o-inline--between { justify-content: space-between; }
 .o-inline--evenly  { justify-content: space-evenly; }
 
-/* ===== WRAP KONTROLL ===== */
-.o-inline--nowrap { flex-wrap: nowrap; }
+/* ===== ALIGN (VERTICAL) ===== */
+.o-inline--top    { align-items: flex-start; }
+.o-inline--middle { align-items: center; }
+.o-inline--bottom { align-items: flex-end; }
+
+/* ===== GAP VARIANTS ===== */
+.o-inline--xs { gap: $space-2; }
+.o-inline--sm { gap: $space-3; }
+.o-inline--md { gap: $space-4; }
+.o-inline--lg { gap: $space-6; }
+
+/*
+<div class="o-inline">
+  <span>icon</span>
+  <span>Label</span>
+</div>
+
+<div class="o-inline o-inline--center o-inline--sm">
+  <span>One</span>
+  <span>Two</span>
+</div>
+*/
