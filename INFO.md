@@ -1,5 +1,15 @@
 # Portfolio (INFO)
 
+o-section : teljes, szelesseg, hatter, padding, margin
+o-container : max-width, közepre igazitas
+o-row : elemek (vizszintes)
+o-stack : elemek (függöleges)
+o-inline : vizszintes, töressel
+
+h1, h2, h3 stb. : __title
+__subtitle, __text, __label, __description
+
+
 ## Commit Style
 
 ```MD

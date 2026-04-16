@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /* ===== BRANDS ===== */
 /* ===== NEUTRALS ===== */
 /* ===== STATES ===== */
@@ -225,46 +224,111 @@ dialog.debug {
   max-inline-size: 75ch;
 }
 
-/* ===== CLUSTER OBJECT ===== */
-.o-cluster {
+/* ===== ROW OBJECT ===== */
+.o-row {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   gap: 0.75rem;
 }
 
-/* ===== JUSTIFY VARIANTS ===== */
-.o-cluster--start {
+/* ===== JUSTIFY (HORIZONTAL) ===== */
+.o-row--start {
   justify-content: flex-start;
 }
 
-.o-cluster--center {
+.o-row--center {
   justify-content: center;
 }
 
-.o-cluster--end {
+.o-row--end {
   justify-content: flex-end;
 }
 
-.o-cluster--between {
+.o-row--between {
   justify-content: space-between;
 }
 
-.o-cluster--evenly {
+.o-row--evenly {
   justify-content: space-evenly;
 }
 
-/* ===== WRAP KONTROLL ===== */
-.o-cluster--nowrap {
+/* ===== ALIGN (VERTICAL) ===== */
+.o-row--top {
+  align-items: flex-start;
+}
+
+.o-row--middle {
+  align-items: center;
+}
+
+.o-row--bottom {
+  align-items: flex-end;
+}
+
+/* ===== WRAP CONTROL ===== */
+.o-row--nowrap {
   flex-wrap: nowrap;
 }
 
+/* ===== GAP VARIANTS ===== */
+.o-row--xs {
+  gap: 0.5rem;
+}
+
+.o-row--sm {
+  gap: 0.75rem;
+}
+
+.o-row--md {
+  gap: 1rem;
+}
+
+.o-row--lg {
+  gap: 4rem;
+}
+
+.o-row--xl {
+  gap: 6rem;
+}
+
+/*
+<div class="o-row">
+  <button>One</button>
+  <button>Two</button>
+</div>
+
+<div class="o-row o-row--between">
+  <span>Left</span>
+  <span>Right</span>
+</div>
+
+<div class="o-row o-row--center o-row--sm">
+  <button>A</button>
+  <button>B</button>
+</div>
+
+<div class="o-row o-row--nowrap">
+  <span>icon</span>
+  <span>text</span>
+</div>
+*/
 /* ===== CONTAINER OBJECT ===== */
 .o-container {
   width: 100%;
   max-width: 1200px;
   margin-inline: auto;
   padding-inline: 0.75rem;
+}
+@media (min-width: 768px) {
+  .o-container {
+    padding-inline: 1rem;
+  }
+}
+@media (min-width: 1024px) {
+  .o-container {
+    padding-inline: 2rem;
+  }
 }
 
 /* ===== CONTAINER VARIANTS ===== */
@@ -280,26 +344,71 @@ dialog.debug {
   padding-inline: 0;
 }
 
+.o-container--full {
+  max-width: none;
+}
+
+/*
+<header>
+  <div class="o-container">
+    ...
+  </div>
+</header>
+
+<main>
+  <div class="o-container">
+    ...
+  </div>
+</main>
+
+<footer>
+  <div class="o-container">
+    ...
+  </div>
+</footer>
+
+<section class="o-section">
+  <div class="o-container">
+    ...
+  </div>
+</section>
+*/
 /* ===== GRID OBJECT ===== */
 .o-grid {
   display: grid;
   gap: 1rem;
 }
 
-/* ===== FIX COLUMNS ===== */
-.o-grid--2 {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+/* ===== FIX COLUMNS (MOBILE-FIRST) ===== */
+@media (min-width: 768px) {
+  .o-grid--2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
-.o-grid--3 {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+@media (min-width: 768px) {
+  .o-grid--3 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (min-width: 1024px) {
+  .o-grid--3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }
 
-.o-grid--4 {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+@media (min-width: 768px) {
+  .o-grid--4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (min-width: 1024px) {
+  .o-grid--4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
 }
 
-/* ===== CARDGRID: AUTOMATIC BREAK ===== */
+/* ===== AUTO GRID (RESPONSIVE) ===== */
 .o-grid--auto {
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 }
@@ -325,23 +434,28 @@ dialog.debug {
   gap: 6rem;
 }
 
-/* ===== ON MOBILE FIX FOR FIRST COLUMN ===== */
-@media (max-width: 768px) {
-  .o-grid--2,
-  .o-grid--3,
-  .o-grid--4 {
-    grid-template-columns: 1fr;
-  }
-}
+/*
+<div class="o-grid o-grid--auto">
+  <div>Card</div>
+  <div>Card</div>
+  <div>Card</div>
+</div>
+
+<div class="o-grid o-grid--3">
+  <div>Item</div>
+  <div>Item</div>
+  <div>Item</div>
+</div>
+*/
 /* ===== INLINE OBJECT ===== */
 .o-inline {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   align-items: center;
-  gap: 1rem;
+  gap: 0.75rem;
 }
 
-/* ===== JUSTIFY VARIANTS ===== */
+/* ===== JUSTIFY (HORIZONTAL) ===== */
 .o-inline--start {
   justify-content: flex-start;
 }
@@ -362,17 +476,63 @@ dialog.debug {
   justify-content: space-evenly;
 }
 
-/* ===== WRAP KONTROLL ===== */
-.o-inline--nowrap {
-  flex-wrap: nowrap;
+/* ===== ALIGN (VERTICAL) ===== */
+.o-inline--top {
+  align-items: flex-start;
 }
 
+.o-inline--middle {
+  align-items: center;
+}
+
+.o-inline--bottom {
+  align-items: flex-end;
+}
+
+/* ===== GAP VARIANTS ===== */
+.o-inline--xs {
+  gap: 0.5rem;
+}
+
+.o-inline--sm {
+  gap: 0.75rem;
+}
+
+.o-inline--md {
+  gap: 1rem;
+}
+
+.o-inline--lg {
+  gap: 4rem;
+}
+
+/*
+<div class="o-inline">
+  <span>icon</span>
+  <span>Label</span>
+</div>
+
+<div class="o-inline o-inline--center o-inline--sm">
+  <span>One</span>
+  <span>Two</span>
+</div>
+*/
 /* ===== SECTION OBJECT ===== */
 .o-section {
   padding-block: 4rem;
 }
+@media (min-width: 768px) {
+  .o-section {
+    padding-block: 6rem;
+  }
+}
+@media (min-width: 1024px) {
+  .o-section {
+    padding-block: 8rem;
+  }
+}
 
-/* ===== SECTION VARIANTS ===== */
+/* ===== SPACING VARIANTS ===== */
 .o-section--tight {
   padding-block: 2rem;
 }
@@ -381,12 +541,9 @@ dialog.debug {
   padding-block: 6rem;
 }
 
+/* ===== BACKGROUND VARIANTS ===== */
 .o-section--muted {
   background-color: #2B303B;
-}
-
-.o-section--full {
-  width: 100%;
 }
 
 /* ===== DIVIDER ===== */
@@ -394,6 +551,19 @@ dialog.debug {
   border-block: 1px solid #E2E4E9;
 }
 
+/*
+<section class="o-section">
+  <div class="o-container">
+    ...
+  </div>
+</section>
+
+<section class="o-section o-section--muted">
+  <div class="o-container">
+    ...
+  </div>
+</section>
+*/
 /* ===== STACK OBJECT ===== */
 .o-stack {
   display: flex;
@@ -422,7 +592,7 @@ dialog.debug {
   gap: 6rem;
 }
 
-/* ===== HORIZONTAL POSITIONS ===== */
+/* ===== ALIGN (HORIZONTAL) ===== */
 .o-stack--start {
   align-items: flex-start;
 }
@@ -435,14 +605,36 @@ dialog.debug {
   align-items: flex-end;
 }
 
+/* ===== DISTRIBUTION (VERTICAL) ===== */
 .o-stack--between {
-  align-items: space-between;
+  justify-content: space-between;
 }
 
 .o-stack--evenly {
-  align-items: space-evenly;
+  justify-content: space-evenly;
 }
 
+.o-stack--around {
+  justify-content: space-around;
+}
+
+/*
+<div class="o-stack">
+  <h2>Title</h2>
+  <p>Text</p>
+  <button>Action</button>
+</div>
+
+<div class="o-stack o-stack--sm o-stack--center">
+  <h2>Centered content</h2>
+  <p>Text</p>
+</div>
+
+<div class="o-stack o-stack--lg o-stack--between" style="height: 300px;">
+  <div>Top</div>
+  <div>Bottom</div>
+</div>
+*/
 /* ===== SWITCHER OBJECT ===== */
 .o-switcher {
   display: flex;
@@ -450,7 +642,7 @@ dialog.debug {
   gap: var(--switcher-gap, 4rem);
 }
 
-/* ===== MÉRET VARIANTS ===== */
+/* ===== GAP VARIANTS ===== */
 .o-switcher--tight {
   --switcher-gap: 1rem;
 }
@@ -459,17 +651,39 @@ dialog.debug {
   --switcher-gap: 6rem;
 }
 
-/* ===== GYEREKEK UGYANAKKORA SZÉLESSÉG, MINIMUM ALAPJÁN TÖRNEK ===== */
+/* ===== CHILD BEHAVIOR ===== */
 .o-switcher > * {
   flex-grow: 1;
-  flex-basis: calc(var(--switcher-min, 45rem) - 100%);
+  flex-basis: calc(var(--switcher-min, 30rem) - 100%);
 }
 
+/* ===== SIZE CONTROL ===== */
+.o-switcher--sm {
+  --switcher-min: 20rem;
+}
+
+.o-switcher--md {
+  --switcher-min: 30rem;
+}
+
+.o-switcher--lg {
+  --switcher-min: 40rem;
+}
+
+/*
+<div class="o-switcher">
+  <div>Text</div>
+  <div>Image</div>
+</div>
+
+<div class="o-switcher o-switcher--sm">
+  <div>Left</div>
+  <div>Right</div>
+</div>
+*/
 header {
-  height: 5rem;
   background-color: #16181D;
 }
-
 .header__head .header__title {
   color: #22c55e;
 }

@@ -3,11 +3,19 @@
 @use '../mixins/index' as *;
 
 header {
-  height: 5rem;
   background-color: $role-bg;
+
+  .header__container {
+    // teszt: .o-container
+  }
+
+  .header__inner {
+    // teszt: .o-row
+  }
 }
 
 .header__head {
+  // teszt: .o-row
 
   .header__title {
     color: $role-primary;
@@ -17,6 +25,8 @@ header {
     color: $role-muted;
   }
 }
+
+// EDDIG KÉSZ
 
 .header__nav {
 
